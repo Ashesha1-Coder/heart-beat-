@@ -13,4 +13,81 @@ body{
     position:relative;
     width:80px;
     height:80px;
+    tranform:rotate(45deg);
+    transform-origin: 40px 40px;
+}
+.heart.beat{
+    top:32px;
+    left :32px;
+    position:absolute;
+    width:32px;
+    height:32px;
+    background:red;
+    animation: heart beat 1.3s infinite cubic-bezier(0.215,0.61,0.355,1);
+}
+@keyframes heart-beat{
+    0%{
+        tranform:scale(0.95);
+        filter:hue-rotate(0deg);
+        box-shadow:20px 20px 50px grey;
+        
+
+    }
+    5%{
+        tranform:scale(1.1);
+        filter:hue-rotate(72deg);
+        box-shadow:20px 20px 50px grey;
+        
+        
+
+    }
+    38%{
+        tranform:scale(0.85);
+        filter:hue-rotate(144deg);
+        box-shadow:20px 20px 50px grey;
+        
+
+    }
+    45%{
+        tranform:scale(1);
+        filter:hue-rotate(216deg);
+        box-shadow:20px 20px 50px grey;
+        
+
+    }
+    60%{
+        tranform:scale(0.95);
+        filter:hue-rotate(288deg);
+        box-shadow:20px 20px 50px grey;
+        
+
+    }
+    100%{
+        tranform:scale(0.9);
+        filter:hue-rotate(360deg);
+        box-shadow:20px 20px 50px grey;
+        
+
+    }
+    .heart.beat:: after,
+    .heart .beat:: before{
+        content:"";
+        position: absolute;
+        display:block;
+        width:32px;
+        height:32px;
+        background:red'
+    }
+    .heart .beat::before{
+        left:24px;
+        border-radius:50% 0 0 50%;
+
+    }
+    .heart .beat::after{
+        top:-24px;
+        border-radius:50% 50% 0 0;
+        
+    }
+
+    
 }
